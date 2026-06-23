@@ -22,7 +22,7 @@ def extract_pdf_data_after_keyword(pdf_path, keyword="Date"):
     return extracted_data
 
 # Example usage
-pdf_path = "/Users/mohammeda/Desktop/Data_State.pdf"
+pdf_path = "<path to the file name>"
 keyword = "Date"  # The point where your actual data begins
 extracted_data = extract_pdf_data_after_keyword(pdf_path, keyword)
 
@@ -38,7 +38,7 @@ def clean_extracted_data(extracted_data, output_file):
     ws.row_dimensions[1].height = 5  # Resize first row (header)
     ws.column_dimensions['A'].width = 0.67  # Resize first column (e.g., Date column)
     
-    new_headers = ["Dates", "Descriptions", "Amounts"]
+    new_headers = ["Dates", "Descriptions", "Amounts"] # Change the headers as per the fieldnames provided in the PDF file
 
     headers = extracted_data[0] if extracted_data else []
 
@@ -73,7 +73,7 @@ def clean_extracted_data(extracted_data, output_file):
     # Save the Excel file
     wb.save(output_file)
 
-output_excel = "/Users/mohammeda/Desktop/Credit.xlsx"
+output_excel = "<filepath>"
 
 extracted_data = extract_pdf_data_after_keyword(pdf_path)
 cleaned_data = clean_extracted_data(extracted_data, output_excel)
