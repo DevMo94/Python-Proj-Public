@@ -29,10 +29,7 @@ if __name__ == "__main__":
 
     # List of stock holdings
     holdings = [
-        {"ticker": "IGIL.NS", "bought_price": 435.88, "quantity": 45},
-        {"ticker": "COALINDIA.NS", "bought_price": 379.44, "quantity": 50},
-        {"ticker": "MAZDOCK.BO", "bought_price": 2137.56, "quantity": 10},
-        {"ticker": "KPITTECH.NS", "bought_price": 1361.82, "quantity": 10}
+        {"ticker": "<Enter your ticker ID>", "bought_price": <Price of the stock>, "quantity": <Stock quantity>}
     ]
 
 while endtime():
